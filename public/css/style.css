@@ -1,0 +1,86 @@
+html {
+    font-size: 62.5%
+}
+
+body {
+    padding: 6rem;
+    font-family: 'Nunito', sans-serif;
+    background: #222222;
+}
+
+.title {
+    font-size: 2rem;
+    color: white;
+}
+
+.tags {
+    display: flex;
+    width: 30%;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.form--button {
+    padding: .5rem 1rem;
+    border: .3rem solid black;
+    border-radius: .6rem;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.js {
+    background: #f7df1e;
+    border-color: #d2be1a;
+}
+.html {
+    background: #f1662b;
+    border-color: #e44f25;
+    color: white;
+}
+.css {
+    background: #33a8db;
+    border-color: #1572b7;
+    color: white;
+}
+.node {
+    background: #6bc045;
+    border-color: #3c873a;
+}
+.mongodb {
+    background: #50a94c;
+    border-color: #469d46;
+    color: white;
+}
+.react{
+    background: #61dafb;
+    border-color: #30a3c2;
+}
+
+.devs {
+    margin-top: 2rem;
+}
+
+.developer {
+    display: flex;
+    align-items: center;
+
+    background: #161616;
+    color: white;
+
+    padding: 2rem;
+    margin-top: 1rem;
+
+    border: .5rem solid #121212;
+    border-radius: .6rem;
+
+    font-size: 3rem;
+}
+
+.dev--avatar {
+    width: 10rem;
+    border-radius: .6rem;
+}
+
+.dev--name {
+    margin-left: 5rem;
+}

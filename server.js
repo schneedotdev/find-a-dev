@@ -20,9 +20,10 @@ app.use(express.urlencoded({extended:true}))
 app.use(express.json())
 
 app.get('/', (req, res) => {
-    db.collection('posts').find().toArray()
-        .then(data => {
-            console.log(data);
+    db.collection('devs').find().toArray()
+        .then(devs => {
+            console.log(devs);
+            res.render('index.ejs', { devs })
         })
         .catch(err => console.error(err))
 });
