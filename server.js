@@ -28,8 +28,9 @@ app.get('/', (req, res) => {
         .catch(err => console.error(err))
 });
 
-app.post('/', (req, res) => {
-    console.log(req.body)
+app.get('/addDeveloper', (req, res) => {
+    console.log('new dev')
+    res.sendFile('addnew.html')
 })
 
 app.listen(PORT, () => console.log(`server running on PORT ${PORT}`))

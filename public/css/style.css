@@ -1,11 +1,18 @@
 html {
-    font-size: 62.5%
+    font-size: 50%
 }
 
 body {
-    padding: 6rem;
+    padding: 3rem 6rem;
     font-family: 'Nunito', sans-serif;
     background: #222222;
+}
+
+.header--forms {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
 }
 
 .title {
@@ -15,9 +22,10 @@ body {
 
 .tags {
     display: flex;
-    width: 30%;
-    justify-content: space-between;
-    margin-top: 2rem;
+}
+
+.tags li {
+    margin-right: 2rem;
 }
 
 .form--button {
@@ -29,31 +37,38 @@ body {
 }
 
 .js {
-    background: #f7df1e;
-    border-color: #d2be1a;
+    background: #f7df1e !important;
+    border-color: #d2be1a !important;
+    color: black !important;
 }
 .html {
-    background: #f1662b;
-    border-color: #e44f25;
-    color: white;
+    background: #f1662b !important;
+    border-color: #e44f25 !important;
+    color: black !important;
 }
 .css {
-    background: #33a8db;
-    border-color: #1572b7;
-    color: white;
+    background: #33a8db !important;
+    border-color: #1572b7 !important;
+    color: black !important;
 }
 .node {
-    background: #6bc045;
-    border-color: #3c873a;
+    background: #6bc045 !important;
+    border-color: #3c873a !important;
+    color: black !important;
 }
 .mongodb {
-    background: #50a94c;
-    border-color: #469d46;
-    color: white;
+    background: #50a94c !important;
+    border-color: #04632c !important;
+    color: black !important;
 }
 .react{
-    background: #61dafb;
-    border-color: #30a3c2;
+    background: #61dafb !important;
+    border-color: #30a3c2 !important;
+    color: black !important;
+}
+
+.add-new {
+    border-color: #bcbcc5;
 }
 
 .devs {
@@ -77,10 +92,41 @@ body {
 }
 
 .dev--avatar {
-    width: 10rem;
+    width: 10rem; height: 10rem;
     border-radius: .6rem;
 }
 
 .dev--name {
     margin-left: 5rem;
+}
+
+.dev--skills {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1.5rem;
+    margin: 0 auto 0 4rem;
+    width: 50%;
+}
+
+.dev--skills li {
+    margin: 1rem 1rem;
+    padding: .5rem 1rem;
+    border: .3rem solid black;
+    border-radius: .6rem;
+}
+
+.dev--expertise {
+    margin-left: 5rem;
+}
+
+.dev--socials {
+    display: flex;
+    align-items: center;
+    margin-left: 5rem;
+}
+
+.icon--github,
+.icon--linkedin {
+    width: 3rem; height: 3rem;
+    margin-left: 2rem;
 }
