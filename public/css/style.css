@@ -34,36 +34,54 @@ body {
     border-radius: .6rem;
     font-weight: 400;
     font-size: 1.5rem;
+    cursor: pointer;
 }
 
-.js {
+.JavaScript {
     background: #f7df1e !important;
     border-color: #d2be1a !important;
     color: black !important;
 }
-.html {
+
+.HTML {
     background: #f1662b !important;
     border-color: #e44f25 !important;
     color: black !important;
 }
-.css {
+
+.CSS {
     background: #33a8db !important;
     border-color: #1572b7 !important;
     color: black !important;
 }
-.node {
+
+.Node {
     background: #6bc045 !important;
     border-color: #3c873a !important;
     color: black !important;
 }
-.mongodb {
+
+.MongoDB {
     background: #50a94c !important;
     border-color: #04632c !important;
     color: black !important;
 }
-.react{
+
+.React {
     background: #61dafb !important;
     border-color: #30a3c2 !important;
+    color: black !important;
+}
+
+.EJS {
+    background: #c42761 !important;
+    border-color: #9b1445 !important;
+    color: black !important;
+}
+
+.Handlebars {
+    background: #f0772b !important;
+    border-color: #dc6115 !important;
     color: black !important;
 }
 
@@ -92,7 +110,8 @@ body {
 }
 
 .dev--avatar {
-    width: 10rem; height: 10rem;
+    width: 10rem;
+    height: 10rem;
     border-radius: .6rem;
 }
 
@@ -127,6 +146,7 @@ body {
 
 .icon--github,
 .icon--linkedin {
-    width: 3rem; height: 3rem;
+    width: 3rem;
+    height: 3rem;
     margin-left: 2rem;
 }

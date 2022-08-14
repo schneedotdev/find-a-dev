@@ -25,22 +25,28 @@
                 <form action="/getPosts" method="GET">
                     <ul class="tags">
                         <li>
-                            <button class="form--button js" name="JS" value="JavaScript">JavaScript</button>
+                            <button class="form--button JavaScript" name="JS" value="JavaScript">JavaScript</button>
                         </li>
                         <li>
-                            <button class="form--button html" name="HTML" value="upvote">HTML</button>
+                            <button class="form--button HTML" name="HTML" value="upvote">HTML</button>
                         </li>
                         <li>
-                            <button class="form--button css" name="CSS" value="upvote">CSS</button>
+                            <button class="form--button CSS" name="CSS" value="upvote">CSS</button>
                         </li>
                          <li>
-                            <button class="form--button node" name="Node" value="JavaScript">Node.js</button>
+                            <button class="form--button Node" name="Node" value="JavaScript">Node</button>
                         </li>
                         <li>
-                            <button class="form--button mongodb" name="MongoDB" value="upvote">MongoDB</button>
+                            <button class="form--button MongoDB" name="MongoDB" value="upvote">MongoDB</button>
                         </li>
                         <li>
-                            <button class="form--button react" name="React" value="upvote">React</button>
+                            <button class="form--button React" name="React" value="upvote">React</button>
+                        </li>
+                        <li>
+                            <button class="form--button EJS" name="EJS" value="upvote">EJS</button>
+                        </li>
+                        <li>
+                            <button class="form--button Handlebars" name="Handlebars" value="upvote">Handlebars</button>
                         </li>
                     </ul>
                 </form>
@@ -51,281 +57,39 @@
             </section>
         </header>
 
-
-        <!-- <ul class="devs">
+        <ul class="devs">
             <% for(let i = 0; i < devs.length; i++) { %>
-                <li>
+                <li class="developer">
                     <img class="dev--avatar" src="<%= devs[i].avatar %>" />
                     <h2 class="dev--name"><%= devs[i].name %></h2>
+                
+                    <ul class="dev--skills">
+                        <% for(let j = 0; j < devs[i].skills.length; j++) { %>
+                            <li class="<%= devs[i].skills[j] %>"><%= devs[i].skills[j] %></li>
+                        <% } %>
+                    </ul>
+                
+                    <h3 class="dev--expertise"><%= devs[i].expertise %></h3>
+                
+                    <ul class="dev--socials">
+                        <li>
+                            <a href="<%= devs[i].twitter %>">
+                                <img class="icon--twitter" src="./assets/icons/twitter.svg" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<%= devs[i].linkedin %>">
+                                <img class="icon--linkedin" src="./assets/icons/linkedin.svg" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<%= devs[i].github %>">
+                                <img class="icon--github" src="./assets/icons/github.svg" />
+                            </a>
+                        </li>
+                    </ul>
                 </li>
             <% } %>
-        </ul> -->
-
-        <ul class="devs">
-            <li class="developer">
-                <img class="dev--avatar" src="./assets/headshot-nobg.png" />
-                <h2 class="dev--name">Brian Schnee</h2>
-
-                <ul class="dev--skills">
-                    <li class="js">JavaScript</li>
-                    <li class="html">HTML</li>
-                    <li class="css">CSS</li>
-                    <li class="node">Node</li>
-                    <li class="mongodb">MongoDB</li>
-                    <li class="react">React</li>
-                </ul>
-
-                <h3 class="dev--expertise">Frontend</h3>
-
-                <ul class="dev--socials">
-                    <li>
-                        <a href="#">
-                            <img class="icon--twitter" src="./assets/icons/twitter.svg" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img class="icon--linkedin" src="./assets/icons/linkedin.svg" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img class="icon--github" src="./assets/icons/github.svg" />
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <li class="developer">
-                <img class="dev--avatar" src="./assets/Jacob.jpg" />
-                <h2 class="dev--name">Jacob Asper</h2>
-
-                <ul class="dev--skills">
-                    <li class="js">JavaScript</li>
-                    <li class="html">HTML</li>
-                    <li class="css">CSS</li>
-                    <li class="node">Node</li>
-                    <li class="mongodb">MongoDB</li>
-                    <li class="react">React</li>
-                </ul>
-
-                <h3 class="dev--expertise">Backend</h3>
-
-                <ul class="dev--socials">
-                    <li>
-                        <a href="#">
-                            <img class="icon--twitter" src="./assets/icons/twitter.svg" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img class="icon--linkedin" src="./assets/icons/linkedin.svg" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img class="icon--github" src="./assets/icons/github.svg" />
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <li class="developer">
-                <img class="dev--avatar" src="./assets/Alondra.png" />
-                <h2 class="dev--name">Alondra Mora</h2>
-
-                <ul class="dev--skills">
-                    <li class="js">JavaScript</li>
-                    <li class="html">HTML</li>
-                    <li class="css">CSS</li>
-                    <li class="node">Node</li>
-                    <li class="mongodb">MongoDB</li>
-                    <li class="react">React</li>
-                </ul>
-
-                <h3 class="dev--expertise">Full-Stack</h3>
-
-                <ul class="dev--socials">
-                    <li>
-                        <a href="#">
-                            <img class="icon--twitter" src="./assets/icons/twitter.svg" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img class="icon--linkedin" src="./assets/icons/linkedin.svg" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img class="icon--github" src="./assets/icons/github.svg" />
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <li class="developer">
-                <img class="dev--avatar" src="./assets/Alex.png" />
-                <h2 class="dev--name">Alexis Aguilar</h2>
-
-                <ul class="dev--skills">
-                    <li class="js">JavaScript</li>
-                    <li class="html">HTML</li>
-                    <li class="css">CSS</li>
-                    <li class="node">Node</li>
-                    <li class="mongodb">MongoDB</li>
-                    <li class="react">React</li>
-                </ul>
-
-                <h3 class="dev--expertise">Full-Stack</h3>
-
-                <ul class="dev--socials">
-                    <li>
-                        <a href="#">
-                            <img class="icon--twitter" src="./assets/icons/twitter.svg" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img class="icon--linkedin" src="./assets/icons/linkedin.svg" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img class="icon--github" src="./assets/icons/github.svg" />
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <li class="developer">
-                <img class="dev--avatar" src="./assets/Alyssha.jpg" />
-                <h2 class="dev--name">Alyssha Lewin</h2>
-
-                <ul class="dev--skills">
-                    <li class="js">JavaScript</li>
-                    <li class="html">HTML</li>
-                    <li class="css">CSS</li>
-                    <li class="node">Node</li>
-                    <li class="mongodb">MongoDB</li>
-                    <li class="react">React</li>
-                </ul>
-
-                <h3 class="dev--expertise">Full-Stack</h3>
-
-                <ul class="dev--socials">
-                    <li>
-                        <a href="#">
-                            <img class="icon--twitter" src="./assets/icons/twitter.svg" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img class="icon--linkedin" src="./assets/icons/linkedin.svg" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img class="icon--github" src="./assets/icons/github.svg" />
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <li class="developer">
-                <img class="dev--avatar" src="./assets/JacobGood.jpg" />
-                <h2 class="dev--name">Jacob Good</h2>
-
-                <ul class="dev--skills">
-                    <li class="js">JavaScript</li>
-                    <li class="html">HTML</li>
-                    <li class="css">CSS</li>
-                    <li class="node">Node</li>
-                    <li class="mongodb">MongoDB</li>
-                    <li class="react">React</li>
-                </ul>
-
-                <h3 class="dev--expertise">Full-Stack</h3>
-
-                <ul class="dev--socials">
-                    <li>
-                        <a href="#">
-                            <img class="icon--twitter" src="./assets/icons/twitter.svg" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img class="icon--linkedin" src="./assets/icons/linkedin.svg" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img class="icon--github" src="./assets/icons/github.svg" />
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <li class="developer">
-                <img class="dev--avatar" src="./assets/Bianca.jpg" />
-                <h2 class="dev--name">Bianca Togonon</h2>
-
-                <ul class="dev--skills">
-                    <li class="js">JavaScript</li>
-                    <li class="html">HTML</li>
-                    <li class="css">CSS</li>
-                    <li class="node">Node</li>
-                    <li class="mongodb">MongoDB</li>
-                    <li class="react">React</li>
-                </ul>
-
-                <h3 class="dev--expertise">Full-Stack</h3>
-
-                <ul class="dev--socials">
-                    <li>
-                        <a href="#">
-                            <img class="icon--twitter" src="./assets/icons/twitter.svg" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img class="icon--linkedin" src="./assets/icons/linkedin.svg" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img class="icon--github" src="./assets/icons/github.svg" />
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <li class="developer">
-                <img class="dev--avatar" src="./assets/Dana.jpg" />
-                <h2 class="dev--name">Dana Lee</h2>
-
-                <ul class="dev--skills">
-                    <li class="js">JavaScript</li>
-                    <li class="html">HTML</li>
-                    <li class="css">CSS</li>
-                    <li class="node">Node</li>
-                    <li class="mongodb">MongoDB</li>
-                    <li class="react">React</li>
-                </ul>
-
-                <h3 class="dev--expertise">Full-Stack</h3>
-
-                <ul class="dev--socials">
-                    <li>
-                        <a href="#">
-                            <img class="icon--twitter" src="./assets/icons/twitter.svg" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img class="icon--linkedin" src="./assets/icons/linkedin.svg" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img class="icon--github" src="./assets/icons/github.svg" />
-                        </a>
-                    </li>
-                </ul>
-            </li>
         </ul>
 	</body>
 </html>
