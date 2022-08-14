@@ -22,25 +22,22 @@
             <h1 class="title">Find a dev</h1>
     
             <section class="header--forms">
-                <form action="/getPosts" method="GET">
+                <form action="/findDevs" method="GET">
                     <ul class="tags">
-                        <li>
-                            <button class="form--button JavaScript" name="JS" value="JavaScript">JavaScript</button>
-                        </li>
                         <li>
                             <button class="form--button HTML" name="HTML" value="upvote">HTML</button>
                         </li>
                         <li>
                             <button class="form--button CSS" name="CSS" value="upvote">CSS</button>
                         </li>
-                         <li>
+                        <li>
+                            <button class="form--button JavaScript" name="JS" value="JavaScript">JavaScript</button>
+                        </li>
+                        <li>
                             <button class="form--button Node" name="Node" value="JavaScript">Node</button>
                         </li>
                         <li>
                             <button class="form--button MongoDB" name="MongoDB" value="upvote">MongoDB</button>
-                        </li>
-                        <li>
-                            <button class="form--button React" name="React" value="upvote">React</button>
                         </li>
                         <li>
                             <button class="form--button EJS" name="EJS" value="upvote">EJS</button>
@@ -48,10 +45,13 @@
                         <li>
                             <button class="form--button Handlebars" name="Handlebars" value="upvote">Handlebars</button>
                         </li>
+                        <li>
+                            <button class="form--button React" name="React" value="upvote">React</button>
+                        </li>
                     </ul>
                 </form>
         
-                <form action="/addDeveloper" method="GET">
+                <form action="/developerForm" method="GET">
                     <button class="form--button add-new" name="New">New</button>
                 </form>
             </section>
@@ -73,17 +73,17 @@
                 
                     <ul class="dev--socials">
                         <li>
-                            <a href="<%= devs[i].twitter %>">
+                            <a href="<%= devs[i].twitter %>" target="_blank">
                                 <img class="icon--twitter" src="./assets/icons/twitter.svg" />
                             </a>
                         </li>
                         <li>
-                            <a href="<%= devs[i].linkedin %>">
+                            <a href="<%= devs[i].linkedin %>" target="_blank">
                                 <img class="icon--linkedin" src="./assets/icons/linkedin.svg" />
                             </a>
                         </li>
                         <li>
-                            <a href="<%= devs[i].github %>">
+                            <a href="<%= devs[i].github %>" target="_blank">
                                 <img class="icon--github" src="./assets/icons/github.svg" />
                             </a>
                         </li>
@@ -91,5 +91,9 @@
                 </li>
             <% } %>
         </ul>
+
+        <footer>
+            <h4>created by <a class="author" href="https://brianschnee.com/" target="_blank">Brian Schnee</a></h4>
+        </footer>
 	</body>
 </html>

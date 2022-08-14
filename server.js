@@ -28,9 +28,14 @@ app.get('/', (req, res) => {
         .catch(err => console.error(err))
 });
 
-app.get('/addDeveloper', (req, res) => {
+app.get('/developerForm', (req, res) => {
     console.log('new dev')
-    res.sendFile('addnew.html')
+    res.render('addnew.ejs')
+})
+
+app.post('/addDeveloper', async (req, res) => {
+    console.log('added dev')
+    res.redirect('/')
 })
 
 app.listen(PORT, () => console.log(`server running on PORT ${PORT}`))

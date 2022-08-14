@@ -1,0 +1,68 @@
+/* 
+================ Base Styles ================
+*/
+
+html {
+    font-size: 62.5%
+}
+
+body {
+    padding: 3rem 6rem;
+    font-family: 'Nunito', sans-serif;
+    background: #222222;
+    color: white;
+}
+
+.form--button {
+    padding: .4rem 0.8rem;
+    border: .25rem solid black;
+    border-radius: .5rem;
+    font-weight: 400;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+footer {
+    position: fixed;
+    bottom: 1rem;
+    left: 50%;
+    transform: translate(-50%);
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.author {
+    color: #4285F4;
+    text-decoration: none;
+}
+
+.author:hover {
+    color: #0054db;
+    text-decoration: underline;
+}
+
+/* 
+================ Additional Styles ================
+*/
+
+.title {
+    font-size: 1.6rem;
+    color: white;
+    margin-bottom: 1.6rem;
+}
+
+.header--forms {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.back,
+.submit {
+    border-color: #bcbcc5;
+}
+
+.want-to-help {
+    font-size: 2.4rem;
+}
