@@ -44,17 +44,22 @@ app.post('/addDeveloper', async (req, res) => {
 
             skills = Object.keys(req.body).filter(key => skills.includes(key))
 
+            if (!skills.length) {
+                // default to html/css/js until future implementation
+                skills = ['HTML', 'CSS', 'JavaScript']
+            }
+
             db.collection('devs').insertOne({
                 name: req.body.name.trim(),
                 avatar: `https://github.com/${req.body.github}.png`,
                 skills: skills,
                 expertise: req.body.expertise,
-                twitter: req.body.twitter,
-                linkedin: req.body.linkedin,
-                github: req.body.github,
+                twitter: `https://twitter.com/${req.body.twitter}`,
+                linkedin: `https://linkedin.com/in/${req.body.linkedin}`,
+                github: `https://github.com/${req.body.github}`,
             })
-            res.redirect('/')
         }
+        res.redirect('/')
     } catch (err) {
         console.error(err)
     }

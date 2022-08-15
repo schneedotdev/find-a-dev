@@ -13,7 +13,8 @@ body {
     color: white;
 }
 
-input::placeholder {
+input::placeholder,
+select {
     font-family: 'Saira', sans-serif;
 }
 
@@ -120,7 +121,8 @@ select {
 .name--input,
 #twitter,
 #linkedin,
-#github {
+#github,
+select {
     height: 3rem;
     border: .2rem solid rgba(198, 202, 219, 1);
     border-radius: .25rem;
@@ -154,8 +156,8 @@ legend {
 
 select {
     width: 100%;
-    height: 3rem;
     color: #7c7c7c;
+    background: white;
 }
 
 /* socials */
