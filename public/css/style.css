@@ -51,6 +51,11 @@ footer {
 ================ Additional Styles ================
 */
 
+.a--title {
+    color: white;
+    text-decoration: none;
+}
+
 .title {
     font-size: 1.6rem;
     margin-bottom: 1.6rem;

@@ -19,16 +19,25 @@ app.use(express.static('public'))
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
-app.get('/', (req, res) => {
-    db.collection('devs').find().toArray()
-        .then(devs => {
-            res.render('index.ejs', { devs })
-        })
-        .catch(err => console.error(err))
+app.get('/', async (req, res) => {
+    try {
+        const devs = await db.collection('devs').find().toArray()
+        res.render('index.ejs', { devs })
+    } catch (err) {
+        console.error(err)
+    }
 });
 
+app.get('/findDevs', async (req, res) => {
+    try {
+        const devs = await db.collection('devs').find({ skills: req.query.tag }).toArray()
+        res.render('index.ejs', { devs })
+    } catch (err) {
+        console.error(err)
+    }
+})
+
 app.get('/developerForm', (req, res) => {
-    console.log('new dev')
     res.render('addnew.ejs')
 })
 
