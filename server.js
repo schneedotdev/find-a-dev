@@ -34,7 +34,7 @@ app.get('/developerForm', (req, res) => {
 })
 
 app.post('/addDeveloper', async (req, res) => {
-    console.log('added dev')
+    console.error(req.body)
     res.redirect('/')
 })
 

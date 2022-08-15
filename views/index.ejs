@@ -16,6 +16,10 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet"> 
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Saira:wght@100;300;400;500;700&display=swap" rel="stylesheet">
 	</head>
 	<body>
         <header>
@@ -25,34 +29,34 @@
                 <form action="/findDevs" method="GET">
                     <ul class="tags">
                         <li>
-                            <button class="form--button HTML" name="HTML" value="upvote">HTML</button>
+                            <button class="form--button tag HTML" name="HTML" value="upvote">HTML</button>
                         </li>
                         <li>
-                            <button class="form--button CSS" name="CSS" value="upvote">CSS</button>
+                            <button class="form--button tag CSS" name="CSS" value="upvote">CSS</button>
                         </li>
                         <li>
-                            <button class="form--button JavaScript" name="JS" value="JavaScript">JavaScript</button>
+                            <button class="form--button tag JavaScript" name="JS" value="JavaScript">JavaScript</button>
                         </li>
                         <li>
-                            <button class="form--button Node" name="Node" value="JavaScript">Node</button>
+                            <button class="form--button tag Node" name="Node" value="JavaScript">Node</button>
                         </li>
                         <li>
-                            <button class="form--button MongoDB" name="MongoDB" value="upvote">MongoDB</button>
+                            <button class="form--button tag MongoDB" name="MongoDB" value="upvote">MongoDB</button>
                         </li>
                         <li>
-                            <button class="form--button EJS" name="EJS" value="upvote">EJS</button>
+                            <button class="form--button tag EJS" name="EJS" value="upvote">EJS</button>
                         </li>
                         <li>
-                            <button class="form--button Handlebars" name="Handlebars" value="upvote">Handlebars</button>
+                            <button class="form--button tag Handlebars" name="Handlebars" value="upvote">Handlebars</button>
                         </li>
                         <li>
-                            <button class="form--button React" name="React" value="upvote">React</button>
+                            <button class="form--button tag React" name="React" value="upvote">React</button>
                         </li>
                     </ul>
                 </form>
         
                 <form action="/developerForm" method="GET">
-                    <button class="form--button add-new" name="New">New</button>
+                    <button class="form--button add-new">New</button>
                 </form>
             </section>
         </header>
@@ -65,7 +69,7 @@
                 
                     <ul class="dev--skills">
                         <% for(let j = 0; j < devs[i].skills.length; j++) { %>
-                            <li class="<%= devs[i].skills[j] %>"><%= devs[i].skills[j] %></li>
+                            <li class="tag <%= devs[i].skills[j] %>"><%= devs[i].skills[j] %></li>
                         <% } %>
                     </ul>
                 

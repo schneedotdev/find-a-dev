@@ -8,9 +8,17 @@ html {
 
 body {
     padding: 3rem 6rem;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Saira', sans-serif;
     background: #222222;
     color: white;
+}
+
+input::placeholder {
+    font-family: 'Saira', sans-serif;
+}
+
+label {
+    font-size: 1.5rem;
 }
 
 .form--button {
@@ -23,11 +31,11 @@ body {
 }
 
 footer {
-    position: fixed;
+    /* position: fixed;
     bottom: 1rem;
     left: 50%;
-    transform: translate(-50%);
-    color: white;
+    transform: translate(-50%); */
+    margin-top: 4rem;
     text-align: center;
     font-size: 1.5rem;
 }
@@ -42,27 +50,148 @@ footer {
     text-decoration: underline;
 }
 
+section {
+    text-align: left;
+}
+
+input,
+select {
+    margin-top: .5rem;
+    padding-left: .5rem;
+}
+
+.name--section,
+.skills--section,
+.expertise--section,
+.socials--div {
+    margin-top: 2rem;
+}
+
 /* 
 ================ Additional Styles ================
 */
 
-.title {
-    font-size: 1.6rem;
-    color: white;
-    margin-bottom: 1.6rem;
+/* header  */
+
+.header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
 
-.header--forms {
+.header--div {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.back,
-.submit {
+.header--logo {
+    font-size: 1.6rem
+}
+
+.back {
     border-color: #bcbcc5;
 }
 
-.want-to-help {
-    font-size: 2.4rem;
+.header--title,
+.header--description {
+    font-size: 2.5rem;
+}
+
+.header--title {
+    margin-top: 2rem;
+    font-weight: 500;
+}
+
+.header--description {
+    margin-top: .5rem;
+    font-weight: 100;
+}
+
+/* Form */
+
+.dev--form {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 50%;
+}
+
+.name--input,
+#twitter,
+#linkedin,
+#github {
+    height: 3rem;
+    border: .2rem solid rgba(198, 202, 219, 1);
+    border-radius: .25rem;
+}
+
+/* name */
+.name--section {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Skills */
+fieldset {
+    text-align: center;
+    border: .2rem solid #c6cadb;
+    border-radius: .25rem;
+    padding: 1rem 1.5rem 1.5rem 1.5rem;
+}
+
+fieldset div {
+    display: inline-block;
+    margin: 0 .1rem;
+}
+
+legend {
+    font-size: 1.5rem;
+    padding: 0 .5rem;
+}
+
+/* Expertise */
+
+select {
+    width: 100%;
+    height: 3rem;
+    color: #7c7c7c;
+}
+
+/* socials */
+
+.socials--section,
+.socials--div {
+    display: flex;
+    flex-direction: column;
+}
+
+/* submit */
+.submit--div {
+    text-align: center;
+}
+
+.submit {
+    background: #1db954;
+    color: white;
+
+    border: none;
+    border-radius: .5rem;
+    width: 100%;
+    height: 5rem;
+
+    margin-top: 3.5rem;
+
+    box-shadow: 0 .5rem #10682f;
+
+    font-size: 1.7rem;
+
+    position: relative;
+    transition: top ease 0.5s;
+}
+
+.submit:hover {
+    top: -0.2rem;
+    background: #1bd05a;
+    box-shadow: 0 .8rem #10682f;
 }

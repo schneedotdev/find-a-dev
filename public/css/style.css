@@ -8,8 +8,10 @@ html {
 
 body {
     padding: 2.4rem 4.8rem;
-    font-family: 'Nunito', sans-serif;
+    /* font-family: 'Nunito', sans-serif; */
+    font-family: 'Saira', sans-serif;
     background: #222222;
+    color: white;
 }
 
 .form--button {
@@ -22,11 +24,11 @@ body {
 }
 
 footer {
-    position: fixed;
+    /* position: fixed;
     bottom: 1rem;
     left: 50%;
-    transform: translate(-50%);
-    color: white;
+    transform: translate(-50%); */
+    margin-top: 4rem;
     text-align: center;
     font-size: 1.5rem;
 }
@@ -41,13 +43,16 @@ footer {
     text-decoration: underline;
 }
 
+.tag {
+    font-weight: 400;
+}
+
 /* 
 ================ Additional Styles ================
 */
 
 .title {
     font-size: 1.6rem;
-    color: white;
     margin-bottom: 1.6rem;
 }
 
@@ -160,7 +165,7 @@ footer {
 }
 
 .dev--skills li {
-    margin: 1rem 1rem;
+    margin: .5rem;
     padding: 0.4rem 0.8rem;
     border-width: .25rem;
     border-style: solid;

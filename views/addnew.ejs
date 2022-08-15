@@ -16,45 +16,93 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500&display=swap"
         rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Saira:wght@100;300;400;500;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <header>
-        <h1 class="title">Find a dev</h1>
-
-        <section class="header--forms">
-            <h2 class="want-to-help">Want to offer your help? Please input your information.</h2>
-
+    
+    <header class="header">
+        <div class="header--div">
+            <h2 class="header--logo">Find a dev</h2>
+        
             <form action="/" method="GET">
-                <button class="form--button back" name="New">Back</button>
+                <button class="form--button back">Back</button>
             </form>
+        </div>
+        
+        <h1 class="header--title">Want to offer your help?</h1>
+        <p class="header--description">Fill out the form below.</p>
+    </header>
+
+    <form class="dev--form" action="/addDeveloper" method="POST">
+        <section class="name--section">
+            <label class="name--label" for="name">Name</label>
+            <input type="text" class="name--input" name="name" placeholder=" Enter full name here" maxlength="20" required>
         </section>
 
-        <form action="/addDeveloper" method="POST">
-            <label for="name">Full Name:</label>
-            <input type="text" id="name" name="name" required>
+        <section class="skills--section">
+            <fieldset>
+                <legend>Which technologies you can provide help with?</legend>
 
-            <label for="avatar">Avatar:</label>
-            <input type="file" id="avatar" name="avatar" required>
+                <div>
+                    <input class="skill--input" type="checkbox" name="HTML"><label for="html">HTML</label>
+                </div>
+                <div>
+                    <input class="skill--input" type="checkbox" name="CSS"><label for="css">CSS</label>
+                </div>
+                <div>
+                    <input class="skill--input" type="checkbox" name="JavaScript"><label for="html">JavaScript</label>
+                </div>
+                <div>
+                    <input class="skill--input" type="checkbox" name="Node"><label for="node">Node</label>
+                </div>
+                <div>
+                    <input class="skill--input" type="checkbox" name="MongoDB"><label for="mongodb">MongoDB</label>
+                </div>
+                <div>
+                    <input class="skill--input" type="checkbox" name="EJS"><label for="ejs">EJS</label>
+                </div>
+                <div>
+                    <input class="skill--input" type="checkbox" name="Handlebars"><label for="handlebars">Handlebars</label>
+                </div>
+                <div>
+                    <input class="skill--input" type="checkbox" name="React"><label for="react">React</label>
+                </div>
+            </fieldset>
+        </section>
 
-            <label for="full-name">Skills:</label>
-            <input type="checkbox" name="HTML"><label for="html">HTML</label>
-            <input type="checkbox" name="CSS"><label for="css">CSS</label>
-            <input type="checkbox" name="JavaScript"><label for="html">JavaScript</label>
-            <input type="checkbox" name="Node"><label for="node">Node</label>
-            <input type="checkbox" name="MongoDB"><label for="mongodb">MongoDB</label>
-            <input type="checkbox" name="EJS"><label for="ejs">EJS</label>
-            <input type="checkbox" name="Handlebars"><label for="handlebars">Handlebars</label>
-            <input type="checkbox" name="React"><label for="react">React</label>
+        <section class="expertise--section">
+            <label for="expertise">What type of development do you specialize in?</label>
+            <select name="expertise" required>
+                <option disabled selected>Select Your Expertise</option>
+                <option name="Full-Stack">Full-Stack</option>
+                <option name="Front-End">Front-End</option>
+                <option name="Back-End">Back-End</option>
+            </select>
+        </section>
 
-            <label for="twitter">Twitter:</label>
-            <input type="text" id="twitter" name="twitter" required>
-            <label for="twitter">Twitter:</label>
-            <input type="text" id="twitter" name="twitter" required>
+        <section class="socials--section">
+            <div class="socials--div">
+                <label for="twitter">Twitter</label>
+                <input type="text" id="twitter" name="twitter" maxlength="15" placeholder="Enter Profile Name Here" required>
+            </div>
+            <div class="socials--div">
+                <label for="linkedin">LinkedIn</label>
+                <input type="text" id="linkedin" name="linkedin" maxlength="60" placeholder="Enter Profile Name Here" required>
+            </div>
+            <div class="socials--div">
+                <label for="github">GitHub</label>
+                <input type="text" id="github" name="github" maxlength="39" placeholder="Enter Profile Name Here" required>
+            </div>
+        </section>
 
-            <button class="form--button submit" name="Submit">Submit</button>
-        </form>
-    </header>
+        <div class="submit--div">
+            <button class="submit">submit</button>
+        </div>
+    </form>
 
     <footer>
         <h4>created by <a class="author" href="https://brianschnee.com/" target="_blank">Brian Schnee</a></h4>
