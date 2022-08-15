@@ -7,7 +7,7 @@ html {
 }
 
 body {
-    padding: 2.4rem 4.8rem;
+    padding: 3rem 6rem;
     /* font-family: 'Nunito', sans-serif; */
     font-family: 'Saira', sans-serif;
     background: #222222;
@@ -24,10 +24,6 @@ body {
 }
 
 footer {
-    /* position: fixed;
-    bottom: 1rem;
-    left: 50%;
-    transform: translate(-50%); */
     margin-top: 4rem;
     text-align: center;
     font-size: 1.5rem;
@@ -51,6 +47,12 @@ footer {
 ================ Additional Styles ================
 */
 
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .a--title {
     color: white;
     text-decoration: none;
@@ -58,18 +60,11 @@ footer {
 
 .title {
     font-size: 1.6rem;
-    margin-bottom: 1.6rem;
 }
 
 /* Header/Tags section  */
-
-.header--forms {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 .tags {
+    margin-top: 1.6rem;
     display: flex;
 }
 

@@ -32,10 +32,6 @@ label {
 }
 
 footer {
-    /* position: fixed;
-    bottom: 1rem;
-    left: 50%;
-    transform: translate(-50%); */
     margin-top: 4rem;
     text-align: center;
     font-size: 1.5rem;
@@ -88,6 +84,11 @@ select {
 
 .header--logo {
     font-size: 1.6rem
+}
+
+.a--logo {
+    color: white;
+    text-decoration: none;
 }
 
 .back {
