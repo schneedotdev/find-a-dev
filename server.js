@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 
-require('dotenv').config({ path: './config/.env' })
+require('dotenv').config()
 const PORT = process.env.PORT || 5000
 const DB_STRING = process.env.DB_STRING
 
@@ -74,4 +74,4 @@ app.post('/addDeveloper', async (req, res) => {
     }
 })
 
-app.listen(PORT, () => console.log(`server running on https://localhost:${PORT}`))
+app.listen(PORT, () => console.log(`server running on http://localhost:${PORT}`))
