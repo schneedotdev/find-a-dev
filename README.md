@@ -111,8 +111,12 @@ In order to use this application. Navigate to the find-a-dev <a href="https://fi
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Add Authentication to confirm user social media accounts
+- [ ] Convert to Mongoose
+- [ ] Convert to MVC Architecture
+- [ ] Add Authentication to confirm user social media accounts using Passport.js or Auth0
 - [ ] Add mobile compatibility by created responsive queries
+- [ ] Add Pagination to reduce render size when user base grows
+- [ ] Add user direct messaging using Socket.io
 
 See the [open issues](https://github.com/brianschnee/find-a-dev/issues) for a full list of proposed features (and known issues).
 
