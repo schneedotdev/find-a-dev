@@ -1,113 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Find a dev</title>
-
-    <!-- Styles -->
-    <link rel="stylesheet" href="./css/reset.css" />
-    <link rel="stylesheet" href="./css/addnew.css" />
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500&display=swap"
-        rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Saira:wght@100;300;400;500;700&display=swap" rel="stylesheet">
-</head>
-
-<body>
-    <header class="header">
-        <div class="header--div">
-            <a class="a--logo" href="/">
-                <h2 class="header--logo">Find a dev</h2>
-            </a>
-        
-            <form action="/" method="GET">
-                <button class="form--button back">Back</button>
-            </form>
-        </div>
-        
-        <h1 class="header--title">Want to offer your help?</h1>
-        <p class="header--description">Fill out the form below.</p>
-    </header>
-
-    <form class="dev--form" action="/addDeveloper" method="POST">
-        <section class="name--section">
-            <label class="name--label" for="name">Name</label>
-            <input type="text" class="name--input" name="name" placeholder=" Enter full name here" maxlength="20" required>
-        </section>
-
-        <section class="skills--section">
-            <fieldset required>
-                <legend>Which technologies you can provide help with?</legend>
-
-                <div>
-                    <input class="skill--input" type="checkbox" name="HTML"><label for="html">HTML</label>
-                </div>
-                <div>
-                    <input class="skill--input" type="checkbox" name="CSS"><label for="css">CSS</label>
-                </div>
-                <div>
-                    <input class="skill--input" type="checkbox" name="JavaScript"><label for="html">JavaScript</label>
-                </div>
-                <div>
-                    <input class="skill--input" type="checkbox" name="Node"><label for="node">Node</label>
-                </div>
-                <div>
-                    <input class="skill--input" type="checkbox" name="MongoDB"><label for="mongodb">MongoDB</label>
-                </div>
-                <div>
-                    <input class="skill--input" type="checkbox" name="EJS"><label for="ejs">EJS</label>
-                </div>
-                <div>
-                    <input class="skill--input" type="checkbox" name="Handlebars"><label for="handlebars">Handlebars</label>
-                </div>
-                <div>
-                    <input class="skill--input" type="checkbox" name="React"><label for="react">React</label>
-                </div>
-            </fieldset>
-        </section>
-
-        <section class="expertise--section">
-            <label for="expertise">What type of development do you specialize in?</label>
-            <select name="expertise" required>
-                <option value="" disabled selected>Select Your Expertise</option>
-                <option value="Full-Stack">Full-Stack</option>
-                <option value="Front-End">Front-End</option>
-                <option value="Back-End">Back-End</option>
-            </select>
-        </section>
-
-        <section class="socials--section">
-            <div class="socials--div">
-                <label for="twitter">Twitter</label>
-                <input type="text" id="twitter" name="twitter" maxlength="15" placeholder="Enter Profile Name Here" required>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Find a dev</title>
+        <!-- Styles -->
+        <link rel="stylesheet" href="./css/reset.css">
+        <link rel="stylesheet" href="./css/addnew.css">
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Saira:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header class="header">
+            <div class="header--div">
+                <a class="a--logo" href="/">
+                    <h2 class="header--logo">Find a dev</h2>
+                </a>
+                <form action="/" method="GET">
+                    <button class="form--button back">Back</button>
+                </form>
             </div>
-            <div class="socials--div">
-                <label for="linkedin">LinkedIn</label>
-                <input type="text" id="linkedin" name="linkedin" maxlength="60" placeholder="Enter Profile Name Here" required>
+            <h1 class="header--title">Want to offer your help?</h1>
+            <p class="header--description">Fill out the form below.</p>
+        </header>
+        <form class="dev--form" action="/addDeveloper" method="POST">
+            <section class="name--section">
+                <label class="name--label" for="name">Name</label>
+                <input
+                    type="text"
+                    class="name--input"
+                    name="name"
+                    placeholder=" Enter full name here"
+                    maxlength="20"
+                    required
+                >
+            </section>
+            <section class="skills--section">
+                <fieldset required>
+                    <legend>Which technologies you can provide help with?</legend>
+                    <div>
+                        <input class="skill--input" type="checkbox" name="HTML">
+                        <label for="html">HTML</label>
+                    </div>
+                    <div>
+                        <input class="skill--input" type="checkbox" name="CSS">
+                        <label for="css">CSS</label>
+                    </div>
+                    <div>
+                        <input class="skill--input" type="checkbox" name="JavaScript">
+                        <label for="html">JavaScript</label>
+                    </div>
+                    <div>
+                        <input class="skill--input" type="checkbox" name="Node">
+                        <label for="node">Node</label>
+                    </div>
+                    <div>
+                        <input class="skill--input" type="checkbox" name="MongoDB">
+                        <label for="mongodb">MongoDB</label>
+                    </div>
+                    <div>
+                        <input class="skill--input" type="checkbox" name="EJS">
+                        <label for="ejs">EJS</label>
+                    </div>
+                    <div>
+                        <input class="skill--input" type="checkbox" name="Handlebars">
+                        <label for="handlebars">Handlebars</label>
+                    </div>
+                    <div>
+                        <input class="skill--input" type="checkbox" name="React">
+                        <label for="react">React</label>
+                    </div>
+                </fieldset>
+            </section>
+            <section class="expertise--section">
+                <label for="expertise">What type of development do you specialize in?</label>
+                <select name="expertise" required>
+                    <option value="" disabled selected>Select Your Expertise</option>
+                    <option value="Full-Stack">Full-Stack</option>
+                    <option value="Front-End">Front-End</option>
+                    <option value="Back-End">Back-End</option>
+                </select>
+            </section>
+            <section class="socials--section">
+                <div class="socials--div">
+                    <label for="twitter">Twitter (Username not URL, exclude @ symbol)</label>
+                    <input
+                        type="text"
+                        id="twitter"
+                        name="twitter"
+                        maxlength="15"
+                        placeholder="Enter Profile Name Here. Example: JohnDoe"
+                        required
+                    >
+                </div>
+                <div class="socials--div">
+                    <label for="linkedin">LinkedIn (Username not URL, exclude @ symbol)</label>
+                    <input
+                        type="text"
+                        id="linkedin"
+                        name="linkedin"
+                        maxlength="60"
+                        placeholder="Enter Profile Name Here. Example: JohnDoe"
+                        required
+                    >
+                </div>
+                <div class="socials--div">
+                    <label for="github">GitHub (Username not URL, exclude @ symbol)</label>
+                    <input
+                        type="text"
+                        id="github"
+                        name="github"
+                        maxlength="39"
+                        placeholder="Enter Profile Name Here. Example: JohnDoe"
+                        required
+                    >
+                </div>
+            </section>
+            <div class="submit--div">
+                <button class="submit">submit</button>
             </div>
-            <div class="socials--div">
-                <label for="github">GitHub</label>
-                <input type="text" id="github" name="github" maxlength="39" placeholder="Enter Profile Name Here" required>
-            </div>
-        </section>
-
-        <div class="submit--div">
-            <button class="submit">submit</button>
-        </div>
-    </form>
-
-    <footer>
-        <h4>created by <a class="author" href="https://brianschnee.com/" target="_blank">Brian Schnee</a></h4>
-    </footer>
-</body>
-
+        </form>
+        <footer>
+            <h4>
+                created by
+                <a class="author" href="https://brianschnee.com/" target="_blank">Brian Schnee</a>
+            </h4>
+        </footer>
+    </body>
 </html>
