@@ -65,16 +65,19 @@ app.post('/addDeveloper', async (req, res) => {
             github.replace('https://github.com/', '')
             github.replace('github.com/', '')
             github.replace('@', '')
+            github.trim()
 
             twitter.replace('http://twitter.com/', '')
             twitter.replace('https://twitter.com/', '')
             twitter.replace('twitter.com/', '')
             twitter.replace('@', '')
+            twitter.trim()
 
             linkedin.replace('http://linkedin.com/in/', '')
             linkedin.replace('https://linkedin.com/in/', '')
             linkedin.replace('linkedin.com/in/', '')
             linkedin.replace('@', '')
+            linkedin.trim()
 
             db.collection('devs').insertOne({
                 name: req.body.name.trim(),
