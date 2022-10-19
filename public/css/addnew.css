@@ -198,3 +198,31 @@ select {
     background: #1bd05a;
     box-shadow: 0 .8rem #10682f;
 }
+
+@media screen and (max-width: 1100px) {
+    .dev--form {
+        width: 50rem;
+    }
+}
+
+@media screen and (max-width: 625px) {
+    body {
+        padding-inline: 3rem;
+    }
+
+    .dev--form {
+        width: 40rem;
+    }
+}
+
+@media screen and (max-width: 475px) {
+    .dev--form {
+        width: 35rem;
+    }
+}
+
+@media screen and (max-width: 449px) {
+    .dev--form {
+        width: 30rem;
+    }
+}
