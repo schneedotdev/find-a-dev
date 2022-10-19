@@ -43,6 +43,10 @@ footer {
     font-weight: 400;
 }
 
+.display-mobile {
+    display: none;
+}
+
 /* 
 ================ Additional Styles ================
 */
@@ -64,11 +68,12 @@ header {
 
 /* Header/Tags section  */
 .tags {
-    margin-top: 1.6rem;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .tags li {
+    margin-top: 1.6rem;
     margin-right: 1rem;
 }
 
@@ -130,9 +135,19 @@ header {
     margin-top: 1.6rem;
 }
 
-.developer {
+.developer,
+.content--container,
+.content--desktop {
     display: flex;
     align-items: center;
+}
+
+.content--container,
+.content--desktop {
+    width: 100%;
+}
+
+.developer {
 
     background: #161616;
     color: white;
@@ -144,6 +159,8 @@ header {
     border-radius: 0.5rem;
 
     font-size: 2.4rem;
+
+    overflow: auto;
 }
 
 .dev--avatar {
@@ -154,6 +171,7 @@ header {
 
 .dev--name {
     margin-left: 4rem;
+    width: 25%;
 }
 
 .dev--skills {
@@ -162,10 +180,10 @@ header {
     font-size: 1.25rem;
     margin: 0 auto 0 3.2rem;
     /* width: 50%; */
+    gap: 1rem;
 }
 
 .dev--skills li {
-    margin: .5rem;
     padding: 0.4rem 0.8rem;
     border-width: .25rem;
     border-style: solid;
@@ -187,4 +205,47 @@ header {
     width: 2.4rem;
     height: 2.4rem;
     margin-left: 1.6rem;
+}
+
+@media screen and (max-width: 900px) {
+    .content--container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .content--desktop {
+        justify-content: space-between;
+        margin-bottom: 1rem;
+    }
+
+    .dev--expertise {
+        margin-left: 0;
+    }
+
+    .dev--skills {
+        margin-left: 4rem;
+    }
+
+    .dev--name {
+        margin-right: 4rem;
+    }
+
+    .dev--name,
+    .dev--expertise {
+        font-size: 2rem;
+    }
+
+    .display-mobile {
+        display: flex;
+    }
+
+    .desktop {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    body {
+        padding-inline: 3rem;
+    }
 }

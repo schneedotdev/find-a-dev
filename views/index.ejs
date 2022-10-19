@@ -67,33 +67,46 @@
             <% for(let i = 0; i < devs.length; i++) { %>
                 <li class="developer">
                     <img class="dev--avatar" src="<%= devs[i].avatar %>" />
-                    <h2 class="dev--name"><%= devs[i].name %></h2>
-                
-                    <ul class="dev--skills">
-                        <% for(let j = 0; j < devs[i].skills.length; j++) { %>
-                            <li class="tag <%= devs[i].skills[j] %>"><%= devs[i].skills[j] %></li>
-                        <% } %>
-                    </ul>
-                
-                    <h3 class="dev--expertise"><%= devs[i].expertise %></h3>
-                
-                    <ul class="dev--socials">
-                        <li>
-                            <a href="<%= devs[i].twitter %>" target="_blank">
-                                <img class="icon--twitter" src="./assets/icons/twitter.svg" />
-                            </a>
-                        </li>
-                        <li>
-                            <a href="<%= devs[i].linkedin %>" target="_blank">
-                                <img class="icon--linkedin" src="./assets/icons/linkedin.svg" />
-                            </a>
-                        </li>
-                        <li>
-                            <a href="<%= devs[i].github %>" target="_blank">
-                                <img class="icon--github" src="./assets/icons/github.svg" />
-                            </a>
-                        </li>
-                    </ul>
+                    
+                    <div class="content--container">                    
+                        <div class="content--desktop">
+                            <h2 class="dev--name"><%= devs[i].name %></h2>
+                            
+                            <ul class="dev--skills desktop">
+                                <% for(let j = 0; j < devs[i].skills.length; j++) { %>
+                                    <li class="tag <%= devs[i].skills[j] %>"><%= devs[i].skills[j] %></li>
+                                <% } %>
+                            </ul>
+
+                            <h3 class="dev--expertise"><%= devs[i].expertise %></h3>
+                        
+                            <ul class="dev--socials">
+                                <li>
+                                    <a href="<%= devs[i].twitter %>" target="_blank">
+                                        <img class="icon--twitter" src="./assets/icons/twitter.svg" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="<%= devs[i].linkedin %>" target="_blank">
+                                        <img class="icon--linkedin" src="./assets/icons/linkedin.svg" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="<%= devs[i].github %>" target="_blank">
+                                        <img class="icon--github" src="./assets/icons/github.svg" />
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="display-mobile">
+                            <ul class="dev--skills mobile">
+                                <% for(let j = 0; j < devs[i].skills.length; j++) { %>
+                                    <li class="tag <%= devs[i].skills[j] %>"><%= devs[i].skills[j] %></li>
+                                <% } %>
+                            </ul>
+                        </div>
+                    </div>
                 </li>
             <% } %>
         </ul>
