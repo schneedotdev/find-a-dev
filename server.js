@@ -61,9 +61,9 @@ app.post('/addDeveloper', async (req, res) => {
             let { github, twitter, linkedin } = req.body
 
             // cleansing strings
-            [github, twitter, linkedin].forEach(social => {
-                social = social.replace('@', '')
-                social = social.replace('www.', '')
+            [github, twitter, linkedin].forEach(media => {
+                media = media.replace('@', '')
+                media = media.replace('www.', '')
             })
 
             github.replace('http://github.com/', '')
