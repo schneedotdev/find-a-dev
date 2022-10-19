@@ -58,14 +58,34 @@ app.post('/addDeveloper', async (req, res) => {
                 skills = ['HTML', 'CSS', 'JavaScript']
             }
 
+            let { github, twitter, linkedin } = req.body
+
+            // cleansing strings
+            [github, twitter, linkedin].forEach(social => {
+                social = social.replace('@', '')
+                social = social.replace('www.', '')
+            })
+
+            github.replace('http://github.com/', '')
+            github.replace('https://github.com/', '')
+            github.replace('github.com/', '')
+
+            twitter.replace('http://twitter.com/', '')
+            twitter.replace('https://twitter.com/', '')
+            twitter.replace('twitter.com/', '')
+
+            linkedin.replace('http://linkedin.com/in/', '')
+            linkedin.replace('https://linkedin.com/in/', '')
+            linkedin.replace('linkedin.com/in/', '')
+
             db.collection('devs').insertOne({
                 name: req.body.name.trim(),
-                avatar: `https://github.com/${req.body.github}.png`,
+                avatar: `https://github.com/${github}.png`,
                 skills: skills,
                 expertise: req.body.expertise,
-                twitter: `https://twitter.com/${req.body.twitter}`,
-                linkedin: `https://linkedin.com/in/${req.body.linkedin}`,
-                github: `https://github.com/${req.body.github}`,
+                twitter: `https://twitter.com/${twitter}`,
+                linkedin: `https://linkedin.com/in/${linkedin}`,
+                github: `https://github.com/${github}`,
             })
         }
         res.redirect('/')
