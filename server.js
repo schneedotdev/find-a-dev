@@ -61,22 +61,20 @@ app.post('/addDeveloper', async (req, res) => {
             let { github, twitter, linkedin } = req.body
 
             // cleansing strings
-            [github, twitter, linkedin].forEach(media => {
-                media = media.replace('@', '')
-                media = media.replace('www.', '')
-            })
-
             github.replace('http://github.com/', '')
             github.replace('https://github.com/', '')
             github.replace('github.com/', '')
+            github.replace('@', '')
 
             twitter.replace('http://twitter.com/', '')
             twitter.replace('https://twitter.com/', '')
             twitter.replace('twitter.com/', '')
+            twitter.replace('@', '')
 
             linkedin.replace('http://linkedin.com/in/', '')
             linkedin.replace('https://linkedin.com/in/', '')
             linkedin.replace('linkedin.com/in/', '')
+            linkedin.replace('@', '')
 
             db.collection('devs').insertOne({
                 name: req.body.name.trim(),
